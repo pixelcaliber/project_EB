@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "mdb-react-ui-kit": "^5.0.0",
+    "prop-types": "^15.8.1",
+    "react-avatar": "^5.0.3"
+  }
+}

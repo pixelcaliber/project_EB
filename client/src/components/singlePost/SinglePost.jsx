@@ -4,6 +4,10 @@ import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./singlePost.css";
+import Container from "react-bootstrap/esm/Container";
+import Button from "react-bootstrap/esm/Button";
+import Row from "react-bootstrap/esm/Row";
+import Col from "react-bootstrap/esm/Col";
 
 export default function SinglePost() {
   const location = useLocation();
@@ -41,13 +45,12 @@ export default function SinglePost() {
         title,
         desc,
       });
-      setUpdateMode(false)
+      setUpdateMode(false);
     } catch (err) {}
   };
-
   return (
     <div className="singlePost">
-      <div className="singlePostWrapper">
+      <Container className="singlePostWrapper">
         {post.photo && (
           <img src={PF + post.photo} alt="" className="singlePostImg" />
         )}
@@ -97,11 +100,14 @@ export default function SinglePost() {
           <p className="singlePostDesc">{desc}</p>
         )}
         {updateMode && (
-          <button className="singlePostButton" onClick={handleUpdate}>
+          <Button
+            className="singlePostButton btn-secondary btm-sm"
+            onClick={handleUpdate}
+          >
             Update
-          </button>
+          </Button>
         )}
-      </div>
+      </Container>
     </div>
   );
 }

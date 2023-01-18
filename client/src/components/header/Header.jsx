@@ -1,17 +1,19 @@
 import "./header.css";
-
-export default function Header() {
+import logoURL from "../assets/pic.png"
+import Container from "react-bootstrap/esm/Container";
+import Row from "react-bootstrap/esm/Row";
+import Col from "react-bootstrap/esm/Col";export default function Header() {
   return (
     <div className="header">
-      <div className="headerTitles">
-        <span className="headerTitleSm">React & Node</span>
-        <span className="headerTitleLg">Blog</span>
-      </div>
-      <img
+      {/* <div className="headerTitles">
+        <span className="headerTitleLg">EarnBazaar</span>
+        <span className="headerTitleSm">Connecting Unstoppable Talent with the World</span>
+      </div>       */}
+      {/* <img
         className="headerImg"
-        src="https://images.pexels.com/photos/1167355/pexels-photo-1167355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        src={logoURL}
         alt=""
-      />
+      /> */}
     </div>
   );
 }
